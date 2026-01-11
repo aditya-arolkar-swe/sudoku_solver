@@ -1,5 +1,11 @@
 # Sudoku Solver
 
+Simple sudoku solver I made on flight BA177 from London Heathrow to New York's JFK on 2026-01-11. 
+
+I was playing the Sudoku game on the seatback screens and wanted to challenge myself to build this strategy without internet (no dependencies or AI assistance). 
+
+This solution implements strat A, with strat B needing implementation. 
+
 ## Strat A - Simple Guessing Elimination 
  - Accumulates all possible legal numbers for each cell 
  - If any cell has only 1 possible number, assign that to the board
