@@ -114,9 +114,9 @@ class Board:
                 return False
 
         # if every square doesn't repeat 1 -> 9
-        for square in self.squares:
+        for i, square in enumerate(self.squares):
             if self.has_repeats(square):
-                print(f' [Err] Square {x}, {y}: {square} has repeats!')
+                print(f' [Err] Square {i}: {square} has repeats!')
                 return False
         
         return True
@@ -132,14 +132,14 @@ class Board:
                     print(f' [Err] Row {row} does not have 1->9!')
                 return False
 
-        # if every column doesn't repeat 1 -> 9
+        # if every column has 1 -> 9
         for col in self.columns:
             if sum(col) != 45:
                 if verbose:
                     print(f' [Err] Column {col} does not have 1->9!')
                 return False
 
-        # if every square doesn't repeat 1 -> 9
+        # if every square has 1 -> 9
         for square in self.squares:
             if sum(square) != 45:
                 if verbose:
